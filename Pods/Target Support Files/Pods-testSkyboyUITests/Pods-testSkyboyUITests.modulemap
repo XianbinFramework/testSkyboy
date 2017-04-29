@@ -1,0 +1,6 @@
+framework module Pods_testSkyboyUITests {
+  umbrella header "Pods-testSkyboyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
