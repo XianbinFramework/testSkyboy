@@ -32,6 +32,7 @@ class SkyViewController: UIViewController {
     /// main entrace of app
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         pullChainesJSON()
     }
     
@@ -59,6 +60,11 @@ class SkyViewController: UIViewController {
             }
         }.resume()
     }
+    
+    /// setup conteact ViewControoler UI
+    fileprivate func setupUI(){
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "img_backgroud.png"))
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,6 +78,7 @@ class SkyViewController: UIViewController {
     @IBAction func clickBackBtn(_ sender: UIButton) {
         self.backBtn.isHidden = true
         self.channelsTableView.backToChannels()
+        self.setMapviewHide(hide: true)
     }
     
 }
@@ -79,6 +86,7 @@ class SkyViewController: UIViewController {
 protocol SkyViewDelegate : class {
     func dropSpots(spots:[Spot])
     func toogleBackButton(hide : Bool)
+    func setMapviewHide(hide : Bool)
     func moveCamera(toLocation location:Coordinate)
 }
 
@@ -89,6 +97,10 @@ extension SkyViewController : SkyViewDelegate {
     
     func toogleBackButton(hide: Bool) {
         self.backBtn.isHidden = hide
+    }
+    
+    func setMapviewHide(hide: Bool) {
+        self.skyMapview.isHidden = hide
     }
     
     func moveCamera(toLocation location:Coordinate) {

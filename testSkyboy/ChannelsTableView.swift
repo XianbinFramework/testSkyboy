@@ -66,13 +66,15 @@ extension ChannelsTableView:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !isShowingSpots {
             isShowingSpots = true
-            // show back button
-            self.skyViewDelegate?.toogleBackButton(hide: false)
             // load spots
             let spots      = self.channels[indexPath.row].spots
             self.elements  = spots.map{ ElementModelView(spot :$0) }
             self.reloadData()
             self.skyViewDelegate?.dropSpots(spots: spots)
+            // show back button
+            self.skyViewDelegate?.toogleBackButton(hide: false)
+            // show mapview
+            self.skyViewDelegate?.setMapviewHide(hide: false)
         } else {
             // when click on a spot, move to the spot
             // TODO : get spot coordinate

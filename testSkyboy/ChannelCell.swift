@@ -23,6 +23,7 @@ class ChannelCell: UITableViewCell {
     func configure(element: ElementModelView){
         if !isInited {
             isInited                           = true
+            self.backgroundColor               = .black
             self.thumbnail.layer.cornerRadius  = 10
             self.thumbnail.layer.masksToBounds = true
         }

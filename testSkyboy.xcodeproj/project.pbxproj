@@ -23,6 +23,7 @@
 		2236E8D31EB4D5A200BA414B /* img_notreDame.png in Resources */ = {isa = PBXBuildFile; fileRef = 2236E8D21EB4D5A200BA414B /* img_notreDame.png */; };
 		2236E8D51EB4D95000BA414B /* ElementModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236E8D41EB4D95000BA414B /* ElementModelView.swift */; };
 		2236E8D81EB4E2E900BA414B /* SkyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236E8D71EB4E2E900BA414B /* SkyMapView.swift */; };
+		2236E8DA1EB4F38000BA414B /* img_backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2236E8D91EB4F38000BA414B /* img_backgroud.png */; };
 		5A4CC9CC1C6EAA4F5F2E7FF8 /* Pods_testSkyboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA11618FB6BA061F4A4FBA0A /* Pods_testSkyboy.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		2236E8D21EB4D5A200BA414B /* img_notreDame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notreDame.png; sourceTree = "<group>"; };
 		2236E8D41EB4D95000BA414B /* ElementModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementModelView.swift; sourceTree = "<group>"; };
 		2236E8D71EB4E2E900BA414B /* SkyMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyMapView.swift; sourceTree = "<group>"; };
+		2236E8D91EB4F38000BA414B /* img_backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_backgroud.png; sourceTree = "<group>"; };
 		29F6F6A399FC56BFEB5A4B6F /* Pods-testSkyboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testSkyboy.release.xcconfig"; path = "Pods/Target Support Files/Pods-testSkyboy/Pods-testSkyboy.release.xcconfig"; sourceTree = "<group>"; };
 		54696EA3DD2863FC2AD74A3E /* Pods-testSkyboyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testSkyboyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testSkyboyUITests/Pods-testSkyboyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7948AE287B8FD7D4BB19B035 /* Pods-testSkyboyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testSkyboyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testSkyboyUITests/Pods-testSkyboyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2236E8D21EB4D5A200BA414B /* img_notreDame.png */,
+				2236E8D91EB4F38000BA414B /* img_backgroud.png */,
 				2236E88F1EB4BA9900BA414B /* logo_skyboy.png */,
 			);
 			name = Resources;
@@ -337,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2236E8DA1EB4F38000BA414B /* img_backgroud.png in Resources */,
 				2236E86A1EB4B40C00BA414B /* LaunchScreen.storyboard in Resources */,
 				2236E8671EB4B40C00BA414B /* Assets.xcassets in Resources */,
 				2236E8901EB4BA9900BA414B /* logo_skyboy.png in Resources */,
