@@ -1,26 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sky View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SkyViewController" customModule="testSkyboy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jv0-XU-QwY" customClass="ChannelsTableView" customModule="testSkyboy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" rowHeight="85" id="W0y-Ac-9Ah" customClass="ChannelCell" customModule="testSkyboy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="292" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W0y-Ac-9Ah" id="DNV-AA-6BB">
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="84.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncu-8q-HcB">
+                                                    <rect key="frame" x="8" y="17.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="BJq-ak-Obz"/>
+                                                        <constraint firstAttribute="width" constant="50" id="zFA-bK-psU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-KK-vS5">
+                                                    <rect key="frame" x="66" y="17" width="68.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdC-pG-j0e">
+                                                    <rect key="frame" x="66" y="51.5" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ljr-KK-vS5" firstAttribute="leading" secondItem="ncu-8q-HcB" secondAttribute="trailing" constant="8" id="0bR-xp-9nQ"/>
+                                                <constraint firstItem="ncu-8q-HcB" firstAttribute="leading" secondItem="DNV-AA-6BB" secondAttribute="leadingMargin" id="ZVW-Ql-wrW"/>
+                                                <constraint firstItem="MdC-pG-j0e" firstAttribute="leading" secondItem="Ljr-KK-vS5" secondAttribute="leading" id="dNJ-gR-H2A"/>
+                                                <constraint firstItem="Ljr-KK-vS5" firstAttribute="top" secondItem="ncu-8q-HcB" secondAttribute="top" id="icT-sd-2Gq"/>
+                                                <constraint firstItem="MdC-pG-j0e" firstAttribute="top" secondItem="Ljr-KK-vS5" secondAttribute="bottom" constant="1" id="qON-JN-sKI"/>
+                                                <constraint firstItem="ncu-8q-HcB" firstAttribute="centerY" secondItem="DNV-AA-6BB" secondAttribute="centerY" id="xLL-U6-UAb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headingLabel" destination="Ljr-KK-vS5" id="t42-VI-p2q"/>
+                                            <outlet property="subheadingLabel" destination="MdC-pG-j0e" id="Gz7-IQ-SOd"/>
+                                            <outlet property="thumbnail" destination="ncu-8q-HcB" id="Lp7-HG-68n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-yu-nni" customClass="SkyMapView" customModule="testSkyboy" customModuleProvider="target">
+                                <rect key="frame" x="292" y="20" width="375" height="355"/>
+                            </mapView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehp-rU-RwC">
+                                <rect key="frame" x="20" y="339" width="45" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="clickBackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uIc-Ex-WtO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jv0-XU-QwY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="5eU-SK-RW9"/>
+                            <constraint firstItem="Ehp-rU-RwC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cgp-pv-f5A"/>
+                            <constraint firstItem="jv0-XU-QwY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4375" id="DwN-VO-JYs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jv0-XU-QwY" secondAttribute="leading" constant="20" id="DyU-VD-QGo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ehp-rU-RwC" secondAttribute="bottom" id="GwQ-y9-bly"/>
+                            <constraint firstItem="lC4-yu-nni" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QoB-8M-y3n"/>
+                            <constraint firstItem="lC4-yu-nni" firstAttribute="leading" secondItem="jv0-XU-QwY" secondAttribute="trailing" id="een-eX-kQK"/>
+                            <constraint firstItem="jv0-XU-QwY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mjP-aB-vVw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lC4-yu-nni" secondAttribute="bottom" id="qDO-uN-ydN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lC4-yu-nni" secondAttribute="trailing" constant="-20" id="zhz-jx-KVm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="Ehp-rU-RwC" id="Z73-KU-5s9"/>
+                        <outlet property="channelsTableView" destination="jv0-XU-QwY" id="vvd-Kb-ZLh"/>
+                        <outlet property="skyMapview" destination="lC4-yu-nni" id="Xy6-vX-qXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="26.399999999999999"/>
         </scene>
     </scenes>
 </document>
